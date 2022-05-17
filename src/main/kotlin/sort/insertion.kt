@@ -1,3 +1,5 @@
+package sort
+
 const val ZERO = 0
 const val ONE = 1
 
@@ -6,7 +8,7 @@ fun insertionSort(intList: MutableList<Int>) {
 
     // Find the key
     for (index in ONE until length) {
-        var key = intList[index]
+        val key = intList[index]
         var lastIndex = index - ONE // Last index of sorted list
 
         // Find the place to insert
@@ -23,7 +25,7 @@ fun printList(intList: MutableList<Int>) {
 }
 
 fun main() {
-    var intList = mutableListOf(12, 20, 11, 10, 14, 16, 15, 10)
+    val intList = mutableListOf(12, 20, 11, 10, 14, 16, 15, 10)
     insertionSort(intList)
     printList(intList)
 }
