@@ -1,9 +1,6 @@
 package coroutines
 
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 import kotlinx.datetime.Clock
 
 suspend fun main() {
@@ -22,17 +19,21 @@ suspend fun main() {
     sendDataAsync()
     println("8. Main RunBlocking Finished")
 }
-fun sendDataAsync() {
+@OptIn(DelicateCoroutinesApi::class)
+suspend fun sendDataAsync() {
     val current = Clock.System.now()
     val asyncSend = GlobalScope.launch {
         val data = prepareRequest()
         val result = submitRequest(data)
         processResult(result)
     }
+
     while (!asyncSend.isCompleted) {
-        println("waiting since ${Clock.System.now() - current}")
+        delay(1000)
+        println("waiting since ${Clock.System.now() - current}: isActive: ${asyncSend.isActive}")
     }
 }
+
 fun sendDataRunBlocking() {
     runBlocking {
         val data = prepareRequest()
