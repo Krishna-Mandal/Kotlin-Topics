@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Irene",
+        "id": 1,
+        "grade": "E",
+        "last3MonthSalary": [
+            59631,
+            54796,
+            51625
+        ]
+    },
+    {
+        "name": "Lugh",
+        "id": 2,
+        "grade": "B",
+        "last3MonthSalary": [
+            58333,
+            58341,
+            52946
+        ]
+    },
+    {
+        "name": "Iapetus",
+        "id": 3,
+        "grade": "D",
+        "last3MonthSalary": [
+            51051,
+            59604,
+            59710
+        ]
+    },
+    {
+        "name": "Irene",
+        "id": 4,
+        "grade": "E",
+        "last3MonthSalary": [
+            54856,
+            57831,
+            57324
+        ]
+    },
+    {
+        "name": "Melia",
+        "id": 5,
+        "grade": "A",
+        "last3MonthSalary": [
+            56766,
+            59780,
+            54718
+        ]
+    }
+]
