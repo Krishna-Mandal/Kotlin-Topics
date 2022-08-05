@@ -20,6 +20,7 @@ dependencies {
     implementation("io.github.microutils:kotlin-logging:2.1.23")
     implementation("ch.qos.logback:logback-classic:1.2.11")
     implementation("ch.qos.logback:logback-core:1.2.11")
+    implementation("org.jetbrains.kotlinx:kotlinx-html:0.7.5")
 }
 
 tasks.test {
